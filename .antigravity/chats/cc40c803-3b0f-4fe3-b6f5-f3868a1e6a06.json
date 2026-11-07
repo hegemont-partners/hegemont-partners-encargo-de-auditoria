@@ -64,6 +64,18 @@
       "created_at": "2026-11-06T23:54:25.572Z",
       "sender": "macOS",
       "is_cancelled": false
+    },
+    {
+      "id": "8eecc7ef-88db-43c8-b0bc-76596e801b5e",
+      "role": "user",
+      "content": "Antigravity — Revisión de la auditoría AUD-CRM-10, Issue #96.\n\nChatGPT ha contrastado tu informe con GitHub y consultas de solo lectura a Supabase y ha encontrado discrepancias importantes.\n\nDatos reales actuales:\n\n* 1.012 organizaciones.\n* 249 personas.\n* 19 tablas CRM.\n* 2 lotes de importación y 2.524 registros en staging.\n* 0 registros en crm.enriquecimiento y crm.hallazgo.\n* 804 empresas con correo general.\n* 1 empresa sin país.\n\nTambién debes corregir las referencias al backup (copia-diaria.yml y verificar-copia.yml) y a Storage (bucket logos, columna crm.organizacion.logo).\n\nTareas:\n\n1. Identifica de dónde proceden las cifras erróneas de tu informe.\n2. Corrige el inventario utilizando el esquema y el estado real actual.\n3. Revisa especialmente AUD-CRM-01: hemos confirmado que las funciones SQL exigen TASKS 20 incluso para tareas vinculadas al CRM. Diseña y documenta una prueba con usuario CRM-only en un entorno aislado.\n4. Revisa AUD-CRM-08 y AUD-CRM-16, especialmente aislamiento multicuenta, validación de responsables y riesgos de ampliar permisos.\n5. Revisa si alguna recomendación contradice las decisiones aprobadas o los controles de GOVERNANCE.\n6. Separa hallazgos confirmados, riesgos potenciales y mejoras propuestas.\n\nAñade la adenda a la misma Issue #96. No crees otra auditoría, no modifiques código ni base de datos, no abras PR y no despliegues.\n\nEntrega una matriz final de hallazgos con evidencia, gravedad corregida y criterios de aceptación verificables. No atribuyas pruebas ejecutadas que únicamente hayan sido inspeccionadas en código.",
+      "status": "pending",
+      "model": "gemini-4-argon-medium",
+      "client_type": "gemini-bridge",
+      "parent_message_id": null,
+      "created_at": "2026-11-07T00:04:40.057Z",
+      "sender": "ios",
+      "is_cancelled": false
     }
   ]
 }
